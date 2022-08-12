@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="24179" started-at="2022-08-12T11:42:00 PYT" finished-at="2022-08-12T11:42:24 PYT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="24179" started-at="2022-08-12T11:42:00 PYT" finished-at="2022-08-12T11:42:24 PYT">
+      <class name="Pruebas.Laboratorio03_E2">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Pruebas.Laboratorio03_E2@546e61d5]" name="setUp" is-config="true" duration-ms="3332" started-at="2022-08-12T11:41:57 PYT" finished-at="2022-08-12T11:42:00 PYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="irUrl()[pri:0, instance:Pruebas.Laboratorio03_E2@546e61d5]" name="irUrl" is-config="true" duration-ms="16987" started-at="2022-08-12T11:42:00 PYT" finished-at="2022-08-12T11:42:17 PYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- irUrl -->
+        <test-method status="PASS" signature="maxVentana()[pri:0, instance:Pruebas.Laboratorio03_E2@546e61d5]" name="maxVentana" is-config="true" duration-ms="32" started-at="2022-08-12T11:42:17 PYT" finished-at="2022-08-12T11:42:17 PYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- maxVentana -->
+        <test-method status="PASS" signature="login()[pri:0, instance:Pruebas.Laboratorio03_E2@546e61d5]" name="login" duration-ms="6282" started-at="2022-08-12T11:42:17 PYT" finished-at="2022-08-12T11:42:24 PYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="finPrueba()[pri:0, instance:Pruebas.Laboratorio03_E2@546e61d5]" name="finPrueba" is-config="true" duration-ms="0" started-at="2022-08-12T11:42:24 PYT" finished-at="2022-08-12T11:42:24 PYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finPrueba -->
+        <test-method status="PASS" signature="cierreNavegador()[pri:0, instance:Pruebas.Laboratorio03_E2@546e61d5]" name="cierreNavegador" is-config="true" duration-ms="796" started-at="2022-08-12T11:42:24 PYT" finished-at="2022-08-12T11:42:24 PYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cierreNavegador -->
+        <test-method status="PASS" signature="finSuite()[pri:0, instance:Pruebas.Laboratorio03_E2@546e61d5]" name="finSuite" is-config="true" duration-ms="1" started-at="2022-08-12T11:42:24 PYT" finished-at="2022-08-12T11:42:24 PYT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finSuite -->
+      </class> <!-- Pruebas.Laboratorio03_E2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
