@@ -5,9 +5,11 @@ import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -53,16 +55,30 @@ public class Laboratorio03_E2 {
 		PaginaLogin login = new PaginaLogin(driver);
 		login.LlenarFormulario("maidanaandino90@gmail.com", "diealbii09");
 		
+	    screen=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(screen,new File("..\\Tirso\\Evidencias\\Llenarformulario.png"));
+		
 		screen=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screen,new File("..\\Prueba\\Evidencias\\LlenarFormulario.png"));
 		
 		
 		login.clicSingIn();
+	    screen=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(screen,new File("..\\Tirso\\Evidencias\\PaginaIngreso.png"));
 		
 		screen=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screen,new File("..\\Prueba\\Evidencias\\PaginaAbierta.png"));
+		WebDriverWait myWait1 = new WebDriverWait(driver, 20);
+		myWait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='bigSearch']//input[@placeholder='Buscá tu próximo libro']")));
+		
+		WebElement txtMailTel=myWait1.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//span[@class='bigSearch']//input[@placeholder='Buscá tu próximo libro']"))));
+		txtMailTel.sendKeys("speakout 2");
+		txtMailTel.sendKeys(Keys.ENTER);
+		screen=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	    FileUtils.copyFile(screen,new File("..\\Tirso\\Evidencias\\PaginaBuscar.png"));
 		
 	}
+	
 	@AfterClass
 	public void finPrueba() {
 		System.out.println("Fin de prueba");
@@ -70,7 +86,7 @@ public class Laboratorio03_E2 {
 	
 	@AfterTest 
 	public void cierreNavegador() {
-		driver.quit();
+		//driver.quit();
 		
 	}
 	@AfterSuite
