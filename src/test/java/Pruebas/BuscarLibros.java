@@ -25,7 +25,7 @@ import Paginas.PaginaInicio;
 import Paginas.PaginaLogin;
 
 
-public class Laboratorio03_E2 {
+public class BuscarLibros {
 	WebDriver driver;
 	@BeforeSuite
 	public void setUp() {
@@ -58,10 +58,6 @@ public class Laboratorio03_E2 {
 	    screen=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screen,new File("..\\Tirso\\Evidencias\\Llenarformulario.png"));
 		
-		screen=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(screen,new File("..\\Prueba\\Evidencias\\LlenarFormulario.png"));
-		
-		
 		login.clicSingIn();
 	    screen=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screen,new File("..\\Tirso\\Evidencias\\PaginaIngreso.png"));
@@ -69,11 +65,15 @@ public class Laboratorio03_E2 {
 		screen=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screen,new File("..\\Prueba\\Evidencias\\PaginaAbierta.png"));
 		WebDriverWait myWait1 = new WebDriverWait(driver, 20);
-		myWait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='bigSearch']//input[@placeholder='Buscá tu próximo libro']")));
+		myWait1.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@class='subMenuOpener']")));
 		
-		WebElement txtMailTel=myWait1.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//span[@class='bigSearch']//input[@placeholder='Buscá tu próximo libro']"))));
-		txtMailTel.sendKeys("speakout");
-		txtMailTel.sendKeys(Keys.ENTER);
+		WebElement txtMailTel=myWait1.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//a[@class='subMenuOpener']"))));
+		txtMailTel.click();
+		
+		WebElement clicComprar=myWait1.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//div[@class='listadoProdsGen items3']//div[1]//div[1]//div[1]//button[1]"))));
+		clicComprar.click();
+		
+		//txtMailTel.sendKeys(Keys.ENTER);
 		screen=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	    FileUtils.copyFile(screen,new File("..\\Tirso\\Evidencias\\PaginaBuscar.png"));
 		
